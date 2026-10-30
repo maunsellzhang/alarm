@@ -1,0 +1,19 @@
+# Build output and generated assets
+dist/
+Assets/Reminder.ico
+Tests/*.exe
+Tests/*.pdb
+
+# Local verification and development records
+.artifacts/
+.learnings/
+.vs/
+**/bin/
+**/obj/
+*.user
+*.suo
+*.tmp
+
+# Local reminder data, backups and recovery logs
+reminders.json
+reminders.json.*
