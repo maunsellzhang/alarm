@@ -4,6 +4,18 @@
 
 使用 C#、WPF 和 .NET Framework 4.8 开发，提醒记录保存在本机，应用运行不依赖账户或云服务。
 
+## 下载 1.0 正式版
+
+无需自行编译，下载后即可运行。需要 Windows 11 和 .NET Framework 4.8 或更高的兼容 4.x 版本。
+
+| 下载 | 使用方式 |
+| --- | --- |
+| [QingReminder.exe](https://github.com/maunsellzhang/alarm/releases/download/v1.0.0/QingReminder.exe) | 下载后双击启动 |
+| [便携 ZIP 包](https://github.com/maunsellzhang/alarm/releases/download/v1.0.0/QingReminder-v1.0.0-windows.zip) | 解压后运行其中的 `QingReminder.exe`，内含使用说明 |
+| [SHA256 校验文件](https://github.com/maunsellzhang/alarm/releases/download/v1.0.0/SHA256SUMS.txt) | 用于核对下载文件的完整性 |
+
+完整发布说明和全部附件见 [v1.0.0 Release](https://github.com/maunsellzhang/alarm/releases/tag/v1.0.0) 的 **Assets**。升级前先从托盘退出旧版，再启动新版，已有提醒记录会继续读取。
+
 ## 功能一览
 
 - **两种提醒方式**：指定日期时间，或按小时、分钟、秒设置倒计时。
@@ -96,7 +108,7 @@ alarm/
 └── verify-resources.ps1    # 后台资源和生命周期验证
 ```
 
-`Assets/Reminder.ico` 在构建时自动生成。编译产物、测试截图、运行数据和本机开发记录由 `.gitignore` 排除。
+`Assets/Reminder.ico` 在构建时自动生成。可执行文件和便携包发布在 [GitHub Releases](https://github.com/maunsellzhang/alarm/releases) 的 Assets 中；源码仓库通过 `.gitignore` 排除本地编译产物、测试截图、运行数据和开发记录。
 
 ## 后台占用与资源验证
 

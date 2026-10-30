@@ -85,6 +85,14 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\build.ps1 -Test
 
 ## 数据文件与提交范围
 
+### 版本与发布产物
+
+当前正式版本为 `v1.0.0`。`Program.cs` 中的程序集版本和文件版本为 `1.0.0.0`，产品版本为 `1.0.0`。发布新版本时，应同步调整这些信息、README 下载链接和 Git 标签。
+
+正式构建产物通过对应 GitHub Release 的 **Assets** 提供下载：`QingReminder.exe`、包含程序及使用说明的 ZIP 包，以及 `SHA256SUMS.txt`。发布包应从待发布提交的源码构建，并核对程序版本、测试结果和附件校验值。
+
+### 本地数据与源码
+
 正常提醒数据位于 `%LOCALAPPDATA%\QingReminder\reminders.json`，不在源码目录中。修改存储格式时，需要保留历史数据读取以及无法识别的数据不被覆盖的行为，并补充相应回归测试。
 
 提交应包含源代码、XAML、构建脚本、测试代码和说明文档。生成的图标、可执行文件、测试截图、临时提醒数据及本机开发记录均由 `.gitignore` 排除。
